@@ -9,10 +9,6 @@ def find_date(w, a):
         subtag = etree.Element('date')
         M = re.compile('([1234567890]+?(-|—|-)[1234567890]+?)')
         m = M.search(attr)
-        M1 = re.compile('(ғинуар|февраль|март|апрель|май|июнь|июль|август|сентябрь\
-        |октябрь|ноябрь|декабрь)(-|—|-)(ғинуар|февраль|март|апрель|май|июнь|июль\
-        |август|сентябрь|октябрь|ноябрь|декабрь)')
-        m1 = M1.search(attr)
         if 'type' not in a.attrib:
             if 'trans' in a.attrib and a.attrib['trans'] in arr:
                 a.attrib['type'] = 'date'
